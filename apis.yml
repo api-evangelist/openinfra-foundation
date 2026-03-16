@@ -1,0 +1,44 @@
+aid: openinfra-foundation
+name: OpenInfra Foundation
+description: >-
+  The OpenInfra Foundation, which recently joined the Linux Foundation, is home to open infrastructure projects including OpenStack, Kata Containers, and StarlingX. It supports the development and adoption of open infrastructure for cloud computing, edge computing, and container technology.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Infrastructure
+  - Cloud Computing
+  - OpenStack
+  - Linux Foundation
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/openinfra-foundation/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: openinfra-foundation:openinfra-foundation-api
+    name: OpenInfra Foundation API
+    description: >-
+      Programmatic access to OpenInfra project resources, OpenStack APIs, and cloud infrastructure tools.
+    humanURL: https://openinfra.dev/projects/
+    tags:
+  - Infrastructure
+  - Cloud Computing
+  - OpenStack
+  - Linux Foundation
+    properties:
+      - type: Documentation
+        url: https://openinfra.dev/projects/
+common:
+  - type: Documentation
+    name: OpenInfra Foundation Documentation
+    description: Official documentation for OpenInfra Foundation.
+    url: https://openinfra.dev/projects/
+  - type: GitHubOrg
+    name: OpenInfra Foundation GitHub
+    description: Source code and repositories for OpenInfra Foundation.
+    url: https://github.com/openinfra
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
