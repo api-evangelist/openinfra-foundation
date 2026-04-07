@@ -7,10 +7,10 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Infrastructure
   - Cloud Computing
-  - OpenStack
+  - Infrastructure
   - Linux Foundation
+  - OpenStack
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -23,10 +23,10 @@ apis:
       Programmatic access to OpenInfra project resources, OpenStack APIs, and cloud infrastructure tools.
     humanURL: https://openinfra.dev/projects/
     tags:
-      - Infrastructure
       - Cloud Computing
-      - OpenStack
+      - Infrastructure
       - Linux Foundation
+      - OpenStack
     properties:
       - type: Documentation
         url: https://openinfra.dev/projects/
