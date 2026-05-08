@@ -1,0 +1,230 @@
+openapi: 3.1.0
+info:
+  title: OpenStack API (OpenInfra Foundation)
+  description: >-
+    OpenStack is an OpenInfra Foundation project providing a programmable
+    infrastructure platform. This minimal spec covers a representative subset
+    of the Compute (Nova), Identity (Keystone v3), and Networking (Neutron v2)
+    REST APIs.
+  version: "1.0"
+x-generated-from: https://docs.openstack.org/api-ref/
+x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://example.openstack.local
+    description: An OpenStack-compatible cloud endpoint
+paths:
+  /v3/auth/tokens:
+    post:
+      summary: Authenticate identity and generate a token
+      operationId: createToken
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '201':
+          $ref: '#/components/responses/Generic'
+    get:
+      summary: Validate and show token information
+      operationId: getToken
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    delete:
+      summary: Revoke a token
+      operationId: deleteToken
+      responses:
+        '204':
+          description: Token revoked
+  /v3/auth/catalog:
+    get:
+      summary: Return service catalog for the auth token
+      operationId: getServiceCatalog
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /v3/auth/projects:
+    get:
+      summary: List scopable projects available to the token
+      operationId: listAuthProjects
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /v3/users/{user_id}/projects:
+    parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: List projects for a specific user
+      operationId: listUserProjects
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /v3/roles:
+    get:
+      summary: List roles
+      operationId: listRoles
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /v3/domains:
+    get:
+      summary: List domains
+      operationId: listDomains
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /v3/credentials:
+    post:
+      summary: Create credential
+      operationId: createCredential
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '201':
+          $ref: '#/components/responses/Generic'
+  /v3/groups:
+    get:
+      summary: List groups
+      operationId: listGroups
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /v3/endpoints:
+    get:
+      summary: List service endpoints
+      operationId: listEndpoints
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /servers:
+    get:
+      summary: List Nova compute servers
+      operationId: listServers
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    post:
+      summary: Create a new compute server
+      operationId: createServer
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '202':
+          $ref: '#/components/responses/Generic'
+  /servers/detail:
+    get:
+      summary: List Nova servers with details
+      operationId: listServersDetail
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /servers/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Show Nova server details
+      operationId: getServer
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    put:
+      summary: Update Nova server attributes
+      operationId: updateServer
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    delete:
+      summary: Delete Nova server
+      operationId: deleteServer
+      responses:
+        '204':
+          description: Server deleted
+  /servers/{id}/action:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Execute an action on a Nova server (reboot, rebuild, resize, etc.)
+      operationId: serverAction
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '202':
+          $ref: '#/components/responses/Generic'
+  /v2.0/networks:
+    get:
+      summary: List Neutron networks
+      operationId: listNetworks
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    post:
+      summary: Create a Neutron network
+      operationId: createNetwork
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '201':
+          $ref: '#/components/responses/Generic'
+  /v2.0/networks/{network_id}:
+    parameters:
+      - name: network_id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get details of a specific Neutron network
+      operationId: getNetwork
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    put:
+      summary: Update Neutron network
+      operationId: updateNetwork
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    delete:
+      summary: Delete Neutron network
+      operationId: deleteNetwork
+      responses:
+        '204':
+          description: Network deleted
+  /v2.0/extensions:
+    get:
+      summary: List Neutron API extensions
+      operationId: listExtensions
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+components:
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true

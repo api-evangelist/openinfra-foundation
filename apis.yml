@@ -43,6 +43,8 @@ apis:
         url: https://docs.openstack.org/api-ref/
       - type: GitHubOrg
         url: https://github.com/openstack
+      - url: openapi/openinfra-foundation-openapi.yml
+        type: OpenAPI
   - aid: openinfra-foundation:kata-containers
     name: Kata Containers
     description: >-
