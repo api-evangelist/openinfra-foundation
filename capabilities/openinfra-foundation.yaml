@@ -1,0 +1,817 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: OpenStack API (OpenInfra Foundation)
+  description: 'OpenStack API (OpenInfra Foundation). 24 operations. Lead operation: List Nova compute servers. Self-contained
+    Naftiko capability covering one Openinfra Foundation business surface.'
+  tags:
+  - Openinfra Foundation
+  - OpenStack API (OpenInfra Foundation)
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OPENINFRA_FOUNDATION_API_KEY: OPENINFRA_FOUNDATION_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openinfra-foundation
+    baseUri: https://example.openstack.local
+    description: OpenStack API (OpenInfra Foundation) business capability. Self-contained, no shared references.
+    resources:
+    - name: servers
+      path: /servers
+      operations:
+      - name: listservers
+        method: GET
+        description: List Nova compute servers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createserver
+        method: POST
+        description: Create a new compute server
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: servers-detail
+      path: /servers/detail
+      operations:
+      - name: listserversdetail
+        method: GET
+        description: List Nova servers with details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: servers-id
+      path: /servers/{id}
+      operations:
+      - name: getserver
+        method: GET
+        description: Show Nova server details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateserver
+        method: PUT
+        description: Update Nova server attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+      - name: deleteserver
+        method: DELETE
+        description: Delete Nova server
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: servers-id-action
+      path: /servers/{id}/action
+      operations:
+      - name: serveraction
+        method: POST
+        description: Execute an action on a Nova server (reboot, rebuild, resize, etc.)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: v2.0-extensions
+      path: /v2.0/extensions
+      operations:
+      - name: listextensions
+        method: GET
+        description: List Neutron API extensions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v2.0-networks
+      path: /v2.0/networks
+      operations:
+      - name: listnetworks
+        method: GET
+        description: List Neutron networks
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createnetwork
+        method: POST
+        description: Create a Neutron network
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: v2.0-networks-network_id
+      path: /v2.0/networks/{network_id}
+      operations:
+      - name: getnetwork
+        method: GET
+        description: Get details of a specific Neutron network
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updatenetwork
+        method: PUT
+        description: Update Neutron network
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+      - name: deletenetwork
+        method: DELETE
+        description: Delete Neutron network
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v3-auth-catalog
+      path: /v3/auth/catalog
+      operations:
+      - name: getservicecatalog
+        method: GET
+        description: Return service catalog for the auth token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v3-auth-projects
+      path: /v3/auth/projects
+      operations:
+      - name: listauthprojects
+        method: GET
+        description: List scopable projects available to the token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v3-auth-tokens
+      path: /v3/auth/tokens
+      operations:
+      - name: createtoken
+        method: POST
+        description: Authenticate identity and generate a token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+      - name: gettoken
+        method: GET
+        description: Validate and show token information
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletetoken
+        method: DELETE
+        description: Revoke a token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v3-credentials
+      path: /v3/credentials
+      operations:
+      - name: createcredential
+        method: POST
+        description: Create credential
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: v3-domains
+      path: /v3/domains
+      operations:
+      - name: listdomains
+        method: GET
+        description: List domains
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v3-endpoints
+      path: /v3/endpoints
+      operations:
+      - name: listendpoints
+        method: GET
+        description: List service endpoints
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v3-groups
+      path: /v3/groups
+      operations:
+      - name: listgroups
+        method: GET
+        description: List groups
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v3-roles
+      path: /v3/roles
+      operations:
+      - name: listroles
+        method: GET
+        description: List roles
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v3-users-user_id-projects
+      path: /v3/users/{user_id}/projects
+      operations:
+      - name: listuserprojects
+        method: GET
+        description: List projects for a specific user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: openinfra-foundation-rest
+    port: 8080
+    description: REST adapter for OpenStack API (OpenInfra Foundation). One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/servers
+      name: servers
+      description: REST surface for servers.
+      operations:
+      - method: GET
+        name: listservers
+        description: List Nova compute servers
+        call: openinfra-foundation.listservers
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createserver
+        description: Create a new compute server
+        call: openinfra-foundation.createserver
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/servers/detail
+      name: servers-detail
+      description: REST surface for servers-detail.
+      operations:
+      - method: GET
+        name: listserversdetail
+        description: List Nova servers with details
+        call: openinfra-foundation.listserversdetail
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/servers/{id}
+      name: servers-id
+      description: REST surface for servers-id.
+      operations:
+      - method: GET
+        name: getserver
+        description: Show Nova server details
+        call: openinfra-foundation.getserver
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: updateserver
+        description: Update Nova server attributes
+        call: openinfra-foundation.updateserver
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteserver
+        description: Delete Nova server
+        call: openinfra-foundation.deleteserver
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/servers/{id}/action
+      name: servers-id-action
+      description: REST surface for servers-id-action.
+      operations:
+      - method: POST
+        name: serveraction
+        description: Execute an action on a Nova server (reboot, rebuild, resize, etc.)
+        call: openinfra-foundation.serveraction
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v2-0/extensions
+      name: v2-0-extensions
+      description: REST surface for v2.0-extensions.
+      operations:
+      - method: GET
+        name: listextensions
+        description: List Neutron API extensions
+        call: openinfra-foundation.listextensions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v2-0/networks
+      name: v2-0-networks
+      description: REST surface for v2.0-networks.
+      operations:
+      - method: GET
+        name: listnetworks
+        description: List Neutron networks
+        call: openinfra-foundation.listnetworks
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createnetwork
+        description: Create a Neutron network
+        call: openinfra-foundation.createnetwork
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v2-0/networks/{network-id}
+      name: v2-0-networks-network-id
+      description: REST surface for v2.0-networks-network_id.
+      operations:
+      - method: GET
+        name: getnetwork
+        description: Get details of a specific Neutron network
+        call: openinfra-foundation.getnetwork
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: updatenetwork
+        description: Update Neutron network
+        call: openinfra-foundation.updatenetwork
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletenetwork
+        description: Delete Neutron network
+        call: openinfra-foundation.deletenetwork
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/auth/catalog
+      name: v3-auth-catalog
+      description: REST surface for v3-auth-catalog.
+      operations:
+      - method: GET
+        name: getservicecatalog
+        description: Return service catalog for the auth token
+        call: openinfra-foundation.getservicecatalog
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/auth/projects
+      name: v3-auth-projects
+      description: REST surface for v3-auth-projects.
+      operations:
+      - method: GET
+        name: listauthprojects
+        description: List scopable projects available to the token
+        call: openinfra-foundation.listauthprojects
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/auth/tokens
+      name: v3-auth-tokens
+      description: REST surface for v3-auth-tokens.
+      operations:
+      - method: POST
+        name: createtoken
+        description: Authenticate identity and generate a token
+        call: openinfra-foundation.createtoken
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: gettoken
+        description: Validate and show token information
+        call: openinfra-foundation.gettoken
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletetoken
+        description: Revoke a token
+        call: openinfra-foundation.deletetoken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/credentials
+      name: v3-credentials
+      description: REST surface for v3-credentials.
+      operations:
+      - method: POST
+        name: createcredential
+        description: Create credential
+        call: openinfra-foundation.createcredential
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/domains
+      name: v3-domains
+      description: REST surface for v3-domains.
+      operations:
+      - method: GET
+        name: listdomains
+        description: List domains
+        call: openinfra-foundation.listdomains
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/endpoints
+      name: v3-endpoints
+      description: REST surface for v3-endpoints.
+      operations:
+      - method: GET
+        name: listendpoints
+        description: List service endpoints
+        call: openinfra-foundation.listendpoints
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/groups
+      name: v3-groups
+      description: REST surface for v3-groups.
+      operations:
+      - method: GET
+        name: listgroups
+        description: List groups
+        call: openinfra-foundation.listgroups
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/roles
+      name: v3-roles
+      description: REST surface for v3-roles.
+      operations:
+      - method: GET
+        name: listroles
+        description: List roles
+        call: openinfra-foundation.listroles
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/users/{user-id}/projects
+      name: v3-users-user-id-projects
+      description: REST surface for v3-users-user_id-projects.
+      operations:
+      - method: GET
+        name: listuserprojects
+        description: List projects for a specific user
+        call: openinfra-foundation.listuserprojects
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openinfra-foundation-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for OpenStack API (OpenInfra Foundation). One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-nova-compute-servers
+      description: List Nova compute servers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listservers
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-new-compute-server
+      description: Create a new compute server
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openinfra-foundation.createserver
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-nova-servers-details
+      description: List Nova servers with details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listserversdetail
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: show-nova-server-details
+      description: Show Nova server details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.getserver
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-nova-server-attributes
+      description: Update Nova server attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.updateserver
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-nova-server
+      description: Delete Nova server
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: openinfra-foundation.deleteserver
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: execute-action-nova-server-reboot
+      description: Execute an action on a Nova server (reboot, rebuild, resize, etc.)
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openinfra-foundation.serveraction
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-neutron-api-extensions
+      description: List Neutron API extensions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listextensions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-neutron-networks
+      description: List Neutron networks
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listnetworks
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-neutron-network
+      description: Create a Neutron network
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openinfra-foundation.createnetwork
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-details-specific-neutron-network
+      description: Get details of a specific Neutron network
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.getnetwork
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-neutron-network
+      description: Update Neutron network
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.updatenetwork
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-neutron-network
+      description: Delete Neutron network
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: openinfra-foundation.deletenetwork
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: return-service-catalog-auth-token
+      description: Return service catalog for the auth token
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.getservicecatalog
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-scopable-projects-available-token
+      description: List scopable projects available to the token
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listauthprojects
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: authenticate-identity-and-generate-token
+      description: Authenticate identity and generate a token
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openinfra-foundation.createtoken
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: validate-and-show-token-information
+      description: Validate and show token information
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.gettoken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: revoke-token
+      description: Revoke a token
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: openinfra-foundation.deletetoken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-credential
+      description: Create credential
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openinfra-foundation.createcredential
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-domains
+      description: List domains
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listdomains
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-service-endpoints
+      description: List service endpoints
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listendpoints
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-groups
+      description: List groups
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listgroups
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-roles
+      description: List roles
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listroles
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-projects-specific-user
+      description: List projects for a specific user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openinfra-foundation.listuserprojects
+      outputParameters:
+      - type: object
+        mapping: $.
