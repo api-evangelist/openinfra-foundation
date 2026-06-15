@@ -1,0 +1,358 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenStack API (OpenInfra Foundation)",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Validate and show token information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v3/auth/tokens"
+      },
+      "docs": "Validate and show token information"
+    },
+    {
+      "info": {
+        "name": "Authenticate identity and generate a token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://example.openstack.local/v3/auth/tokens",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Authenticate identity and generate a token"
+    },
+    {
+      "info": {
+        "name": "Revoke a token",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://example.openstack.local/v3/auth/tokens"
+      },
+      "docs": "Revoke a token"
+    },
+    {
+      "info": {
+        "name": "Return service catalog for the auth token",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v3/auth/catalog"
+      },
+      "docs": "Return service catalog for the auth token"
+    },
+    {
+      "info": {
+        "name": "List scopable projects available to the token",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v3/auth/projects"
+      },
+      "docs": "List scopable projects available to the token"
+    },
+    {
+      "info": {
+        "name": "List projects for a specific user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v3/users/:user_id/projects",
+        "params": [
+          {
+            "name": "user_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List projects for a specific user"
+    },
+    {
+      "info": {
+        "name": "List roles",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v3/roles"
+      },
+      "docs": "List roles"
+    },
+    {
+      "info": {
+        "name": "List domains",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v3/domains"
+      },
+      "docs": "List domains"
+    },
+    {
+      "info": {
+        "name": "Create credential",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://example.openstack.local/v3/credentials",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create credential"
+    },
+    {
+      "info": {
+        "name": "List groups",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v3/groups"
+      },
+      "docs": "List groups"
+    },
+    {
+      "info": {
+        "name": "List service endpoints",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v3/endpoints"
+      },
+      "docs": "List service endpoints"
+    },
+    {
+      "info": {
+        "name": "List Nova compute servers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/servers"
+      },
+      "docs": "List Nova compute servers"
+    },
+    {
+      "info": {
+        "name": "Create a new compute server",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://example.openstack.local/servers",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a new compute server"
+    },
+    {
+      "info": {
+        "name": "List Nova servers with details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/servers/detail"
+      },
+      "docs": "List Nova servers with details"
+    },
+    {
+      "info": {
+        "name": "Show Nova server details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/servers/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Show Nova server details"
+    },
+    {
+      "info": {
+        "name": "Update Nova server attributes",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://example.openstack.local/servers/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update Nova server attributes"
+    },
+    {
+      "info": {
+        "name": "Delete Nova server",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://example.openstack.local/servers/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete Nova server"
+    },
+    {
+      "info": {
+        "name": "Execute an action on a Nova server (reboot, rebuild, resize, etc.)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://example.openstack.local/servers/:id/action",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Execute an action on a Nova server (reboot, rebuild, resize, etc.)"
+    },
+    {
+      "info": {
+        "name": "List Neutron networks",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v2.0/networks"
+      },
+      "docs": "List Neutron networks"
+    },
+    {
+      "info": {
+        "name": "Create a Neutron network",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://example.openstack.local/v2.0/networks",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a Neutron network"
+    },
+    {
+      "info": {
+        "name": "Get details of a specific Neutron network",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v2.0/networks/:network_id",
+        "params": [
+          {
+            "name": "network_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get details of a specific Neutron network"
+    },
+    {
+      "info": {
+        "name": "Update Neutron network",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://example.openstack.local/v2.0/networks/:network_id",
+        "params": [
+          {
+            "name": "network_id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update Neutron network"
+    },
+    {
+      "info": {
+        "name": "Delete Neutron network",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://example.openstack.local/v2.0/networks/:network_id",
+        "params": [
+          {
+            "name": "network_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete Neutron network"
+    },
+    {
+      "info": {
+        "name": "List Neutron API extensions",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://example.openstack.local/v2.0/extensions"
+      },
+      "docs": "List Neutron API extensions"
+    }
+  ],
+  "bundled": true
+}
