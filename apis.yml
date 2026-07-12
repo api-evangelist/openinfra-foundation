@@ -86,6 +86,8 @@ apis:
       - type: GitHubOrg
         url: https://opendev.org/zuul
 common:
+  - type: DomainSecurity
+    url: security/openinfra-foundation-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/openinfra-foundation
   - type: Website
@@ -97,6 +99,8 @@ common:
   - type: GitHubOrg
     name: OpenInfra GitHub
     url: https://github.com/openinfra
+  - url: https://openinfra.org/rss.xml
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
