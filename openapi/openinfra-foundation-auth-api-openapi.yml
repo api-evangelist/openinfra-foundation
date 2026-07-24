@@ -1,0 +1,75 @@
+openapi: 3.1.0
+info:
+  title: OpenStack API (OpenInfra Foundation) Auth API
+  description: OpenStack is an OpenInfra Foundation project providing a programmable infrastructure platform. This minimal spec covers a representative subset of the Compute (Nova), Identity (Keystone v3), and Networking (Neutron v2) REST APIs.
+  version: '1.0'
+servers:
+- url: https://example.openstack.local
+  description: An OpenStack-compatible cloud endpoint
+tags:
+- name: Auth
+paths:
+  /v3/auth/tokens:
+    post:
+      summary: Authenticate identity and generate a token
+      operationId: createToken
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '201':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Auth
+    get:
+      summary: Validate and show token information
+      operationId: getToken
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Auth
+    delete:
+      summary: Revoke a token
+      operationId: deleteToken
+      responses:
+        '204':
+          description: Token revoked
+      tags:
+      - Auth
+  /v3/auth/catalog:
+    get:
+      summary: Return service catalog for the auth token
+      operationId: getServiceCatalog
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Auth
+  /v3/auth/projects:
+    get:
+      summary: List scopable projects available to the token
+      operationId: listAuthProjects
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Auth
+components:
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+x-generated-from: https://docs.openstack.org/api-ref/
+x-generated-by: claude-crawl-2026-05-08

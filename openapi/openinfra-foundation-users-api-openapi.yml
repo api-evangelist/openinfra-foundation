@@ -1,0 +1,37 @@
+openapi: 3.1.0
+info:
+  title: OpenStack API (OpenInfra Foundation) Auth Users API
+  description: OpenStack is an OpenInfra Foundation project providing a programmable infrastructure platform. This minimal spec covers a representative subset of the Compute (Nova), Identity (Keystone v3), and Networking (Neutron v2) REST APIs.
+  version: '1.0'
+servers:
+- url: https://example.openstack.local
+  description: An OpenStack-compatible cloud endpoint
+tags:
+- name: Users
+paths:
+  /v3/users/{user_id}/projects:
+    parameters:
+    - name: user_id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: List projects for a specific user
+      operationId: listUserProjects
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Users
+components:
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+x-generated-from: https://docs.openstack.org/api-ref/
+x-generated-by: claude-crawl-2026-05-08

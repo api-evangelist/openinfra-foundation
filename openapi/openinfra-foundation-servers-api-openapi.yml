@@ -1,0 +1,108 @@
+openapi: 3.1.0
+info:
+  title: OpenStack API (OpenInfra Foundation) Auth Servers API
+  description: OpenStack is an OpenInfra Foundation project providing a programmable infrastructure platform. This minimal spec covers a representative subset of the Compute (Nova), Identity (Keystone v3), and Networking (Neutron v2) REST APIs.
+  version: '1.0'
+servers:
+- url: https://example.openstack.local
+  description: An OpenStack-compatible cloud endpoint
+tags:
+- name: Servers
+paths:
+  /servers:
+    get:
+      summary: List Nova compute servers
+      operationId: listServers
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Servers
+    post:
+      summary: Create a new compute server
+      operationId: createServer
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '202':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Servers
+  /servers/detail:
+    get:
+      summary: List Nova servers with details
+      operationId: listServersDetail
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Servers
+  /servers/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Show Nova server details
+      operationId: getServer
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Servers
+    put:
+      summary: Update Nova server attributes
+      operationId: updateServer
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Servers
+    delete:
+      summary: Delete Nova server
+      operationId: deleteServer
+      responses:
+        '204':
+          description: Server deleted
+      tags:
+      - Servers
+  /servers/{id}/action:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Execute an action on a Nova server (reboot, rebuild, resize, etc.)
+      operationId: serverAction
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '202':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Servers
+components:
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+x-generated-from: https://docs.openstack.org/api-ref/
+x-generated-by: claude-crawl-2026-05-08

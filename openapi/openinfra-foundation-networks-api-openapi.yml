@@ -1,0 +1,82 @@
+openapi: 3.1.0
+info:
+  title: OpenStack API (OpenInfra Foundation) Auth Networks API
+  description: OpenStack is an OpenInfra Foundation project providing a programmable infrastructure platform. This minimal spec covers a representative subset of the Compute (Nova), Identity (Keystone v3), and Networking (Neutron v2) REST APIs.
+  version: '1.0'
+servers:
+- url: https://example.openstack.local
+  description: An OpenStack-compatible cloud endpoint
+tags:
+- name: Networks
+paths:
+  /v2.0/networks:
+    get:
+      summary: List Neutron networks
+      operationId: listNetworks
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Networks
+    post:
+      summary: Create a Neutron network
+      operationId: createNetwork
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '201':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Networks
+  /v2.0/networks/{network_id}:
+    parameters:
+    - name: network_id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get details of a specific Neutron network
+      operationId: getNetwork
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Networks
+    put:
+      summary: Update Neutron network
+      operationId: updateNetwork
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Networks
+    delete:
+      summary: Delete Neutron network
+      operationId: deleteNetwork
+      responses:
+        '204':
+          description: Network deleted
+      tags:
+      - Networks
+components:
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+x-generated-from: https://docs.openstack.org/api-ref/
+x-generated-by: claude-crawl-2026-05-08
