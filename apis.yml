@@ -5,9 +5,21 @@ description: >-
   including OpenStack, Kata Containers, StarlingX, and Zuul. It supports the development and adoption of open
   infrastructure for cloud computing, edge computing, and container technology.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openinfra-foundation.png
 tags:
   - Cloud Computing
   - Infrastructure
@@ -21,70 +33,181 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/openinfra-foundation/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: openinfra-foundation:openstack
-    name: OpenStack
-    description: >-
-      OpenStack is a programmable infrastructure platform for managing virtual machines, containers, and bare metal at
-      cloud scale, with a broad set of REST APIs across compute, networking, storage, identity, and image services.
-    humanURL: https://www.openstack.org/
-    tags:
-      - Cloud Computing
-      - Infrastructure
-      - VMs
-      - Containers
-      - Bare Metal
-    properties:
-      - type: Documentation
-        url: https://docs.openstack.org/api-ref/
-      - type: GitHubOrg
-        url: https://github.com/openstack
-      - url: openapi/openinfra-foundation-openapi.yml
-        type: OpenAPI
-  - aid: openinfra-foundation:kata-containers
-    name: Kata Containers
-    description: >-
-      Kata Containers provides secure, lightweight, CRI-compatible virtualized containers, combining the speed of
-      containers with the isolation of virtual machines.
-    humanURL: https://katacontainers.io/
-    tags:
-      - Containers
-      - Virtualization
-      - Security
-    properties:
-      - type: Documentation
-        url: https://katacontainers.io/docs/
-      - type: GitHubOrg
-        url: https://github.com/kata-containers
-  - aid: openinfra-foundation:starlingx
-    name: StarlingX
-    description: >-
-      StarlingX is an edge cloud computing infrastructure platform optimized for high performance, ultra-low latency
-      applications, integrating OpenStack, Kubernetes, and supporting services.
-    humanURL: https://www.starlingx.io/
-    tags:
-      - Edge Computing
-      - Cloud Native
-      - Low Latency
-    properties:
-      - type: Documentation
-        url: https://docs.starlingx.io/
-      - type: GitHubOrg
-        url: https://opendev.org/starlingx
-  - aid: openinfra-foundation:zuul
-    name: Zuul
-    description: >-
-      Zuul is a CI/CD platform that gates changes across multiple systems and repositories, providing project gating,
-      cross-project dependency management, and pipeline-driven automation.
-    humanURL: https://zuul-ci.org/
-    tags:
-      - CI/CD
-      - Automation
-      - Gating
-    properties:
-      - type: Documentation
-        url: https://zuul-ci.org/docs/
-      - type: GitHubOrg
-        url: https://opendev.org/zuul
+- aid: openinfra-foundation:kata-containers
+  name: Kata Containers
+  description: >-
+    Kata Containers provides secure, lightweight, CRI-compatible virtualized containers, combining the
+    speed of containers with the isolation of virtual machines.
+  humanURL: https://katacontainers.io/
+  tags:
+  - Containers
+  - Virtualization
+  - Security
+  properties:
+  - type: Documentation
+    url: https://katacontainers.io/docs/
+  - type: GitHubOrg
+    url: https://github.com/kata-containers
+- aid: openinfra-foundation:starlingx
+  name: StarlingX
+  description: >-
+    StarlingX is an edge cloud computing infrastructure platform optimized for high performance, ultra-low
+    latency applications, integrating OpenStack, Kubernetes, and supporting services.
+  humanURL: https://www.starlingx.io/
+  tags:
+  - Edge Computing
+  - Cloud Native
+  - Low Latency
+  properties:
+  - type: Documentation
+    url: https://docs.starlingx.io/
+  - type: GitHubOrg
+    url: https://opendev.org/starlingx
+- aid: openinfra-foundation:zuul
+  name: Zuul
+  description: >-
+    Zuul is a CI/CD platform that gates changes across multiple systems and repositories, providing project
+    gating, cross-project dependency management, and pipeline-driven automation.
+  humanURL: https://zuul-ci.org/
+  tags:
+  - CI/CD
+  - Automation
+  - Gating
+  properties:
+  - type: Documentation
+    url: https://zuul-ci.org/docs/
+  - type: GitHubOrg
+    url: https://opendev.org/zuul
+- aid: openinfra-foundation:openinfra-foundation-auth-api
+  name: OpenInfra Foundation Auth API
+  description: The Auth API from OpenInfra Foundation — 3 operation(s) for auth.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Auth
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-auth-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-credentials-api
+  name: OpenInfra Foundation Credentials API
+  description: The Credentials API from OpenInfra Foundation — 1 operation(s) for credentials.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Credentials
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-credentials-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-domains-api
+  name: OpenInfra Foundation Domains API
+  description: The Domains API from OpenInfra Foundation — 1 operation(s) for domains.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Domains
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-domains-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-endpoints-api
+  name: OpenInfra Foundation Endpoints API
+  description: The Endpoints API from OpenInfra Foundation — 1 operation(s) for endpoints.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Endpoints
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-endpoints-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-extensions-api
+  name: OpenInfra Foundation Extensions API
+  description: The Extensions API from OpenInfra Foundation — 1 operation(s) for extensions.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Extensions
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-extensions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-groups-api
+  name: OpenInfra Foundation Groups API
+  description: The Groups API from OpenInfra Foundation — 1 operation(s) for groups.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-groups-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-networks-api
+  name: OpenInfra Foundation Networks API
+  description: The Networks API from OpenInfra Foundation — 2 operation(s) for networks.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Networks
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-networks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-roles-api
+  name: OpenInfra Foundation Roles API
+  description: The Roles API from OpenInfra Foundation — 1 operation(s) for roles.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Roles
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-roles-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-servers-api
+  name: OpenInfra Foundation Servers API
+  description: The Servers API from OpenInfra Foundation — 4 operation(s) for servers.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Servers
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-servers-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
+- aid: openinfra-foundation:openinfra-foundation-users-api
+  name: OpenInfra Foundation Users API
+  description: The Users API from OpenInfra Foundation — 1 operation(s) for users.
+  humanURL: https://www.openstack.org/
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/openinfra-foundation-users-api-openapi.yml
+  - type: Documentation
+    url: https://docs.openstack.org/api-ref/
+  - type: GitHubOrg
+    url: https://github.com/openstack
 common:
   - type: AgenticAccess
     url: agentic-access/openinfra-foundation-agentic-access.yml
