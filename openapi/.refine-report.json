@@ -1,0 +1,32 @@
+{
+  "provider": "openinfra-foundation",
+  "sources": [
+    "openinfra-foundation-auth-api-openapi.yml",
+    "openinfra-foundation-credentials-api-openapi.yml",
+    "openinfra-foundation-domains-api-openapi.yml",
+    "openinfra-foundation-endpoints-api-openapi.yml",
+    "openinfra-foundation-extensions-api-openapi.yml",
+    "openinfra-foundation-groups-api-openapi.yml",
+    "openinfra-foundation-networks-api-openapi.yml",
+    "openinfra-foundation-roles-api-openapi.yml",
+    "openinfra-foundation-servers-api-openapi.yml",
+    "openinfra-foundation-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "openinfra-foundation-auth-api-openapi.yml",
+    "openinfra-foundation-credentials-api-openapi.yml",
+    "openinfra-foundation-domains-api-openapi.yml",
+    "openinfra-foundation-endpoints-api-openapi.yml",
+    "openinfra-foundation-extensions-api-openapi.yml",
+    "openinfra-foundation-groups-api-openapi.yml",
+    "openinfra-foundation-networks-api-openapi.yml",
+    "openinfra-foundation-roles-api-openapi.yml",
+    "openinfra-foundation-servers-api-openapi.yml",
+    "openinfra-foundation-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
