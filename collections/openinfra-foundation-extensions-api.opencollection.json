@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenStack API (OpenInfra Foundation) Auth Extensions API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Extensions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Neutron API extensions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/v2.0/extensions"
+          },
+          "docs": "List Neutron API extensions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

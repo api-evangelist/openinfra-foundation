@@ -1,0 +1,101 @@
+{
+  "item": [
+    {
+      "id": "6b7c8538-f789-409a-aa8e-77cd5455a290",
+      "name": "Roles",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "aca3649f-bb0a-4835-bec9-97b7f32fd27b",
+          "name": "List roles",
+          "request": {
+            "name": "List roles",
+            "description": {},
+            "url": {
+              "path": [
+                "v3",
+                "roles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0efc1ae7-d324-4102-a4e4-2bff75385141",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "roles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": \"string\",\n  \"key_1\": 7125.160871365504,\n  \"key_2\": 4738,\n  \"key_3\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://example.openstack.local",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2d421aba-c92a-4059-a37d-9b12f547f72a",
+    "name": "OpenStack API (OpenInfra Foundation) Auth Roles API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenStack is an OpenInfra Foundation project providing a programmable infrastructure platform. This minimal spec covers a representative subset of the Compute (Nova), Identity (Keystone v3), and Networking (Neutron v2) REST APIs.",
+      "type": "text/plain"
+    }
+  }
+}

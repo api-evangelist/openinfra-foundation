@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenStack API (OpenInfra Foundation) Auth Domains API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Domains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List domains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/v3/domains"
+          },
+          "docs": "List domains"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

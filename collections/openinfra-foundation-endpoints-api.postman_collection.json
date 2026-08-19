@@ -1,0 +1,101 @@
+{
+  "item": [
+    {
+      "id": "81ff30e8-130c-4be0-8124-0f8849daf882",
+      "name": "Endpoints",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "79dfd628-0e50-4e66-9ce0-e871bde47c44",
+          "name": "List service endpoints",
+          "request": {
+            "name": "List service endpoints",
+            "description": {},
+            "url": {
+              "path": [
+                "v3",
+                "endpoints"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fddefb3a-1938-477a-b53f-760e27324670",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "endpoints"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": true,\n  \"key_1\": \"string\",\n  \"key_2\": 3814.5564371652454\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://example.openstack.local",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e7055f28-c035-4366-9f93-ab89d01c958c",
+    "name": "OpenStack API (OpenInfra Foundation) Auth Endpoints API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenStack is an OpenInfra Foundation project providing a programmable infrastructure platform. This minimal spec covers a representative subset of the Compute (Nova), Identity (Keystone v3), and Networking (Neutron v2) REST APIs.",
+      "type": "text/plain"
+    }
+  }
+}

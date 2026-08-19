@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenStack API (OpenInfra Foundation) Auth API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Auth",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Validate and show token information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/v3/auth/tokens"
+          },
+          "docs": "Validate and show token information"
+        },
+        {
+          "info": {
+            "name": "Authenticate identity and generate a token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://example.openstack.local/v3/auth/tokens",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Authenticate identity and generate a token"
+        },
+        {
+          "info": {
+            "name": "Revoke a token",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://example.openstack.local/v3/auth/tokens"
+          },
+          "docs": "Revoke a token"
+        },
+        {
+          "info": {
+            "name": "Return service catalog for the auth token",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/v3/auth/catalog"
+          },
+          "docs": "Return service catalog for the auth token"
+        },
+        {
+          "info": {
+            "name": "List scopable projects available to the token",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/v3/auth/projects"
+          },
+          "docs": "List scopable projects available to the token"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

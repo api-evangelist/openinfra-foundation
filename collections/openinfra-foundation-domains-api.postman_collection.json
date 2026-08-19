@@ -1,0 +1,101 @@
+{
+  "item": [
+    {
+      "id": "42993a9c-cfbb-45b6-8453-9d718124b241",
+      "name": "Domains",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cd9f2582-c54d-4be4-8122-c48c39251e21",
+          "name": "List domains",
+          "request": {
+            "name": "List domains",
+            "description": {},
+            "url": {
+              "path": [
+                "v3",
+                "domains"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6960d7d4-4aaa-440c-a497-bfcf5cfbcd4b",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "domains"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": \"string\",\n  \"key_1\": 6790\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://example.openstack.local",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2e0cd5eb-563a-4c6a-816f-5659a33e212f",
+    "name": "OpenStack API (OpenInfra Foundation) Auth Domains API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenStack is an OpenInfra Foundation project providing a programmable infrastructure platform. This minimal spec covers a representative subset of the Compute (Nova), Identity (Keystone v3), and Networking (Neutron v2) REST APIs.",
+      "type": "text/plain"
+    }
+  }
+}

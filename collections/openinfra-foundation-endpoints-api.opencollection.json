@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenStack API (OpenInfra Foundation) Auth Endpoints API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Endpoints",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List service endpoints",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/v3/endpoints"
+          },
+          "docs": "List service endpoints"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

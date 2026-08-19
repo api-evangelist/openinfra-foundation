@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenStack API (OpenInfra Foundation) Auth Networks API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Networks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Neutron networks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/v2.0/networks"
+          },
+          "docs": "List Neutron networks"
+        },
+        {
+          "info": {
+            "name": "Create a Neutron network",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://example.openstack.local/v2.0/networks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a Neutron network"
+        },
+        {
+          "info": {
+            "name": "Get details of a specific Neutron network",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/v2.0/networks/:network_id",
+            "params": [
+              {
+                "name": "network_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get details of a specific Neutron network"
+        },
+        {
+          "info": {
+            "name": "Update Neutron network",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://example.openstack.local/v2.0/networks/:network_id",
+            "params": [
+              {
+                "name": "network_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Neutron network"
+        },
+        {
+          "info": {
+            "name": "Delete Neutron network",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://example.openstack.local/v2.0/networks/:network_id",
+            "params": [
+              {
+                "name": "network_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Neutron network"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

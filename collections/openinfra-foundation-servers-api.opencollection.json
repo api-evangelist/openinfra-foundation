@@ -1,0 +1,135 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenStack API (OpenInfra Foundation) Auth Servers API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Servers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Nova compute servers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/servers"
+          },
+          "docs": "List Nova compute servers"
+        },
+        {
+          "info": {
+            "name": "Create a new compute server",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://example.openstack.local/servers",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new compute server"
+        },
+        {
+          "info": {
+            "name": "List Nova servers with details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/servers/detail"
+          },
+          "docs": "List Nova servers with details"
+        },
+        {
+          "info": {
+            "name": "Show Nova server details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.openstack.local/servers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show Nova server details"
+        },
+        {
+          "info": {
+            "name": "Update Nova server attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://example.openstack.local/servers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Nova server attributes"
+        },
+        {
+          "info": {
+            "name": "Delete Nova server",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://example.openstack.local/servers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Nova server"
+        },
+        {
+          "info": {
+            "name": "Execute an action on a Nova server (reboot, rebuild, resize, etc.)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://example.openstack.local/servers/:id/action",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Execute an action on a Nova server (reboot, rebuild, resize, etc.)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
