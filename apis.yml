@@ -56,6 +56,10 @@ apis:
   humanURL: https://www.starlingx.io/
   tags:
   - Edge Computing
+  - Cloud-Native
+  - Low Latency
+  tags_raw:
+  - Edge Computing
   - Cloud Native
   - Low Latency
   properties:
@@ -83,6 +87,8 @@ apis:
   description: The Auth API from OpenInfra Foundation — 3 operation(s) for auth.
   humanURL: https://www.openstack.org/
   tags:
+  - Authentication
+  tags_raw:
   - Auth
   properties:
   - type: OpenAPI
@@ -121,7 +127,8 @@ apis:
   name: OpenInfra Foundation Endpoints API
   description: The Endpoints API from OpenInfra Foundation — 1 operation(s) for endpoints.
   humanURL: https://www.openstack.org/
-  tags:
+  tags: []
+  tags_raw:
   - Endpoints
   properties:
   - type: OpenAPI
@@ -148,6 +155,8 @@ apis:
   description: The Groups API from OpenInfra Foundation — 1 operation(s) for groups.
   humanURL: https://www.openstack.org/
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -200,6 +209,8 @@ apis:
   description: The Users API from OpenInfra Foundation — 1 operation(s) for users.
   humanURL: https://www.openstack.org/
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
