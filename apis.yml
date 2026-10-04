@@ -231,6 +231,9 @@ apis:
   - type: GitHubOrg
     url: https://github.com/openstack
 common:
+  - type: CapabilityMap
+    url: capabilities/openinfra-foundation-capability-edges.yml
+    name: OpenInfra Foundation Business Capability Map
   - type: AgenticAccess
     url: agentic-access/openinfra-foundation-agentic-access.yml
   - type: DomainSecurity

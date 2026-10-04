@@ -1,0 +1,35 @@
+slug: openinfra-foundation
+provider: OpenInfra Foundation
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Servers
+  spec_file: openinfra-foundation-servers-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: POST /servers createServer "Create a new compute server"; POST /servers/{id}/action "Execute
+    an action on a Nova server (reboot, rebuild, resize, etc.)"
+  reason: Lifecycle management of Nova compute instances — provisioning and operating compute infrastructure,
+    squarely IT Infrastructure Management. Not a human-'server' homograph.
+- tag: Networks
+  spec_file: openinfra-foundation-networks-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: POST /v2.0/networks createNetwork "Create a Neutron network"; DELETE /v2.0/networks/{network_id}
+    "Delete Neutron network"
+  reason: Full CRUD over virtual cloud networks in OpenStack Neutron — provisioning and management of
+    network infrastructure, i.e. IT Infrastructure Management.
