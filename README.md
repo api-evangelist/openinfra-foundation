@@ -1,4 +1,4 @@
-# OpenInfra Foundation (openinfra-foundation)
+# OpenInfra Foundation
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,118 +66,135 @@
 
 The OpenInfra Foundation, which recently joined the Linux Foundation, is home to open infrastructure projects including OpenStack, Kata Containers, StarlingX, and Zuul. It supports the development and adoption of open infrastructure for cloud computing, edge computing, and container technology.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/openinfra-foundation/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/openinfra-foundation/refs/heads/main/apis.yml)
+**Areas:** Cloud Computing · Infrastructure · Linux Foundation · OpenStack · Kata Containers · StarlingX · Zuul
 
-## Scope
+## OpenInfra Foundation on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for OpenInfra Foundation is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/openinfra-foundation/](https://apis.io/providers/openinfra-foundation/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (13)
 
-- Cloud Computing
-- Infrastructure
-- Linux Foundation
-- OpenStack
-- Kata Containers
-- StarlingX
-- Zuul
+- [Kata Containers](https://apis.io/apis/openinfra-foundation/kata-containers/) — Kata Containers provides secure, lightweight, CRI-compatible virtualized containers, combining the speed of containers with the isolation of virtual machines.
+- [StarlingX](https://apis.io/apis/openinfra-foundation/starlingx/) — StarlingX is an edge cloud computing infrastructure platform optimized for high performance, ultra-low latency applications, integrating OpenStack,…
+- [Zuul](https://apis.io/apis/openinfra-foundation/zuul/) — Zuul is a CI/CD platform that gates changes across multiple systems and repositories, providing project gating, cross-project dependency management, and…
+- [OpenInfra Foundation Auth API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-auth-api/) — The Auth API from OpenInfra Foundation — 3 operation(s) for auth.
+- [OpenInfra Foundation Credentials API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-credentials-api/) — The Credentials API from OpenInfra Foundation — 1 operation(s) for credentials.
+- [OpenInfra Foundation Domains API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-domains-api/) — The Domains API from OpenInfra Foundation — 1 operation(s) for domains.
+- [OpenInfra Foundation Endpoints API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-endpoints-api/) — The Endpoints API from OpenInfra Foundation — 1 operation(s) for endpoints.
+- [OpenInfra Foundation Extensions API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-extensions-api/) — The Extensions API from OpenInfra Foundation — 1 operation(s) for extensions.
+- [OpenInfra Foundation Groups API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-groups-api/) — The Groups API from OpenInfra Foundation — 1 operation(s) for groups.
+- [OpenInfra Foundation Networks API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-networks-api/) — The Networks API from OpenInfra Foundation — 2 operation(s) for networks.
+- [OpenInfra Foundation Roles API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-roles-api/) — The Roles API from OpenInfra Foundation — 1 operation(s) for roles.
+- [OpenInfra Foundation Servers API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-servers-api/) — The Servers API from OpenInfra Foundation — 4 operation(s) for servers.
+- [OpenInfra Foundation Users API](https://apis.io/apis/openinfra-foundation/openinfra-foundation-users-api/) — The Users API from OpenInfra Foundation — 1 operation(s) for users.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### OpenStack
+Which operations an agent can call, which act, and which need a human in the loop.
 
-OpenStack is a programmable infrastructure platform for managing virtual machines, containers, and bare metal at cloud scale, with a broad set of REST APIs across compute, networking, storage, identity, and image services.
+- [Openinfra Foundation Agentic Access](https://apis.io/agentic-access/openinfra-foundation/openinfra-foundation-agentic-access/)
 
-- **Human URL:** [https://www.openstack.org/](https://www.openstack.org/)
+#### Collections (11)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Cloud Computing
-- Infrastructure
-- VMs
-- Containers
-- Bare Metal
+- [OpenStack API (OpenInfra Foundation)](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation/)
+- [OpenStack API (OpenInfra Foundation) Auth API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-auth-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Credentials API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-credentials-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Domains API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-domains-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Endpoints API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-endpoints-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Extensions API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-extensions-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Groups API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-groups-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Networks API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-networks-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Roles API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-roles-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Servers API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-servers-api/)
+- [OpenStack API (OpenInfra Foundation) Auth Users API](https://apis.io/collections/openinfra-foundation/open-openinfra-foundation-users-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://docs.openstack.org/api-ref/)
-- [Git Hub Org](https://github.com/openstack)
-- [OpenAPI](openapi/openinfra-foundation-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openinfra-foundation.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openinfra-foundation.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Kata Containers
+- [Openinfra Foundation Domain Security](https://apis.io/security/openinfra-foundation/openinfra-foundation-domain-security/)
 
-Kata Containers provides secure, lightweight, CRI-compatible virtualized containers, combining the speed of containers with the isolation of virtual machines.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://katacontainers.io/](https://katacontainers.io/)
+Published plans, tiers and prices.
 
-#### Tags
+- [Openinfra Foundation Plans Pricing](https://apis.io/plans/openinfra-foundation/openinfra-foundation-plans-pricing/)
 
-- Containers
-- Virtualization
-- Security
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://katacontainers.io/docs/)
-- [Git Hub Org](https://github.com/kata-containers)
-- [Postman Collection](collections/openinfra-foundation.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openinfra-foundation.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Openinfra Foundation Rate Limits](https://apis.io/rate-limits/openinfra-foundation/openinfra-foundation-rate-limits/)
 
-### StarlingX
+#### FinOps (1)
 
-StarlingX is an edge cloud computing infrastructure platform optimized for high performance, ultra-low latency applications, integrating OpenStack, Kubernetes, and supporting services.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://www.starlingx.io/](https://www.starlingx.io/)
+- [Openinfra Foundation Finops](https://apis.io/finops/openinfra-foundation/openinfra-foundation-finops/)
 
-#### Tags
+## Where to find this API
 
-- Edge Computing
-- Cloud Native
-- Low Latency
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://docs.starlingx.io/)
-- [Git Hub Org](https://opendev.org/starlingx)
-- [Postman Collection](collections/openinfra-foundation.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openinfra-foundation.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Zuul
-
-Zuul is a CI/CD platform that gates changes across multiple systems and repositories, providing project gating, cross-project dependency management, and pipeline-driven automation.
-
-- **Human URL:** [https://zuul-ci.org/](https://zuul-ci.org/)
-
-#### Tags
-
-- CI/CD
-- Automation
-- Gating
-
-#### Properties
-
-- [Documentation](https://zuul-ci.org/docs/)
-- [Git Hub Org](https://opendev.org/zuul)
-- [Postman Collection](collections/openinfra-foundation.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openinfra-foundation.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/openinfra-foundation)
 - [Website](https://openinfra.org/)
 - [Documentation](https://openinfra.org/projects/)
-- [Git Hub Org](https://github.com/openinfra)
+- [Blog](https://openinfra.org/rss.xml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 19.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 38.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 7.9 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/openinfra-foundation/](https://apis.io/providers/openinfra-foundation/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OpenInfra Foundation: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/openinfra-foundation/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
